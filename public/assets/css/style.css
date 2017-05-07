@@ -82,13 +82,20 @@ h6 {
     height: 10rem;
     display: block;
 }
-.main-login{
-    height: 90px;
-    border: 2px dotted pink;
-    margin: 25px 0 25px 0;
-    width: 100%;
-    font-size: 20px;
-    padding: 10px 30px 15px 87px;
+
+.main-login {
+    height: 50px;
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    font-family: 'Helvetica Neue', Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', arial, sans-serif;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: top;
+    width: 83%;
+    margin: 2% 0 0 38px;
 }
 
 .toggle-btn {
@@ -102,6 +109,23 @@ h6 {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+}
+
+.modal-logo {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin: 20px 0 10px 150px;
+}
+
+.modal-image {
+    background-image: url(/assets/images/logo.jpg);
+    height: 318px;
+}
+
+.login-modal {
+    margin: 15% 0 0 -20%;
+    width: 150%;
 }
 
 
@@ -118,9 +142,9 @@ h6 {
 
 @media only screen and (max-width: 500px) {
     .section-scaled {
-    margin: 0 0 0 0;
-    border-radius: 10px 10px 0 0;
-}
+        margin: 0 0 0 0;
+        border-radius: 10px 10px 0 0;
+    }
     .small-nav {
         margin: 10% 0 0 41%;
         float: none;
@@ -159,6 +183,24 @@ h6 {
     .about-modal {
         margin: 5% 0 0 0!important;
     }
+    .login-modal {
+        margin: 15% 0% 0 0%;
+        width: 45%;
+}
+.modal-logo {
+    margin: 20px 0 10px 70px!important;
+}
+.modal-log{
+    padding: 15px 0 0 20px!important;
+}
+.main-login{
+        margin: 15% 0 0 15px!important;
+        color: white;
+}
+.log-btn{
+     margin: 15% 0 0 30px;
+
+}
 }
 
 .product-page .view-area {
@@ -364,15 +406,16 @@ h6 {
 }
 
 .tile {
-  width: 100%;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 30px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
 }
-.image-card{
-     height: 250px;
+
+.image-card {
+    height: 250px;
     width: 170px;
     background-color: #fff;
     margin: 41px 0 15px 0;
@@ -380,40 +423,44 @@ h6 {
     border-radius: 20px;
     color: black;
 }
-.image-card > img{
+
+.image-card>img {
     margin: 15px 5px 0 0;
     height: 150px;
     width: 150px;
     border-radius: 15px;
 }
-.image-card>h2{
-     margin: 15px;
+
+.image-card>h2 {
+    margin: 15px;
     font-size: 25px;
     padding: 0;
     color: black;
     font-weight: 100;
-
 }
-.contact>img{
+
+.contact>img {
     height: 100px;
     width: 100px;
     border-radius: 50%;
     margin: 0 0 0 42%;
-
 }
-.contact-icon{
+
+.contact-icon {
     height: 160px;
     overflow: hidden;
     text-align: center;
     width: 100%;
 }
-.contact-icon>i{
+
+.contact-icon>i {
     font-size: 280px;
     margin-top: -125px;
     display: block;
     width: 100%;
     font-weight: bolder;
 }
+
 .footer .credits {
     padding: 25px 0 15px;
     color: white;
