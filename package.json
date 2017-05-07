@@ -1,0 +1,37 @@
+{
+  "name": "hamppys",
+  "version": "1.0.0",
+  "description": "Hamppys new website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  // "repository": {
+  //   "type": "git",
+  //   "url": "git+https://github.com/aadii104/hamppys.git"
+  // },
+  "author": "aadii104",
+  "license": "ISC",
+  "dependencies": {
+    "angularjs-datepicker": "^2.1.19",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.9.0",
+    "mongoose-title-case": "0.0.4",
+    "mongoose-validator": "^1.2.5",
+    "morgan": "^1.8.1",
+    "nodemailer": "^3.1.7",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0"
+  }
+  // "bugs": {
+  //   "url": "https://github.com/aadii104/hamppys/issues"
+  // },
+  // "homepage": "https://github.com/aadii104/hamppys#readme"
+}
