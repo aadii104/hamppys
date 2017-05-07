@@ -182,6 +182,7 @@ h6 {
     }
     .about-modal {
         margin: 5% 0 0 0!important;
+            width: 105%;;
     }
     .login-modal {
         margin: 15% 0% 0 0%;
@@ -200,6 +201,39 @@ h6 {
 .log-btn{
      margin: 15% 0 0 30px;
 
+}
+.padder{
+    padding: 16px 20px 0 20px!important;
+}
+.padder2{
+    margin: 0 0 0 0 !important;
+}
+.padder2>div>h2{
+    font-size: 15px !important;
+    text-align: center!important;
+}
+.about-modal{
+    font-size: 12px;
+}
+.tile-image{
+    height: 8%!important;
+}
+.contact{
+        margin: 50px 0px 0!important;
+}
+.section-scaled{
+        margin-bottom: 0%!important;
+}
+.border-1{
+    border-top-left-radius: 10%!important;
+    border-top-right-radius: 10%!important;
+}
+.border-2{
+    border-bottom-left-radius: 45px!important;
+    border-bottom-right-radius: 45px!important;
+}
+.call-on>i>h4{
+    font-size: 15px!important;
 }
 }
 
@@ -294,7 +328,8 @@ h6 {
 /*container 2 styling*/
 
 .section-scaled {
-    margin: -100px 30px 0;
+    margin: -100px 0px 0 0;
+    /*margin: -100px 30px 0;*/
     border-radius: 10px 10px 0 0;
 }
 
