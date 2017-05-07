@@ -186,7 +186,7 @@ h6 {
     }
     .login-modal {
         margin: 15% 0% 0 0%;
-        width: 45%;
+        width: 100%;
 }
 .modal-logo {
     margin: 20px 0 10px 70px!important;
@@ -231,9 +231,13 @@ h6 {
 .border-2{
     border-bottom-left-radius: 45px!important;
     border-bottom-right-radius: 45px!important;
+    padding-bottom: 15%;
 }
 .call-on>i>h4{
     font-size: 15px!important;
+}
+.image-card{
+        margin: 41px 0 20px 0;
 }
 }
 
