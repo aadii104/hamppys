@@ -7,8 +7,8 @@ var Schema   		= mongoose.Schema;
  	phone:         	   {type: Number},	
  	current_city:      {type: String},
 	relation:		   {type: String},
-	receiver_name:		{type: String},
-	disk: 				{type: Boolean, default: false}
+	receiver_name:	   {type: String},
+	permission: 	   {type: Boolean, default: false}
 	
  });
 

@@ -43,7 +43,6 @@ module.exports = function (router) {
 
 	router.use(function(req,res,next){
 		var token = req.body.token || req.body.query || req.headers['x-access-token'];
-		console.log(" oop " + token);
 		if(token){
 				jwt.verify(token,secret, function(err,decoded){
 					if (err) {
@@ -58,9 +57,20 @@ module.exports = function (router) {
 		}
 	});
 
-	// router.post('/me',function(req,res){
-	// 	res.send(req.decoded);
-	// });
+	router.post('/me',function(req,res){
+		res.send(req.decoded);
+	});
+
+	router.post('/modal',function(erq,res){
+		User.findOne({email: req.decoded.email},function(err,user){
+			if(err) throw err;
+			if(!user){
+				res.json({success:false,message:'NO user was found'});
+			}else{
+				res.json({success:true,permission: user.permission});
+			}
+		});
+	});
 
 	return router;
 };

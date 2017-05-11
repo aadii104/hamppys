@@ -1,4 +1,6 @@
-angular.module('productController',[])
-.controller('productCtrl', function () {
-
-})
+// angular.module('productController',[])
+// .controller('productCtrl', function () {
+//     if(!disk){
+        
+//     }
+// })
