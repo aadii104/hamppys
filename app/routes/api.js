@@ -1,4 +1,5 @@
 var User = require('../models/user');
+var Prof = require('../models/prof')
 var jwt = require('jsonwebtoken');
 var secret = 'harrypotter';
 
@@ -7,6 +8,28 @@ module.exports = function (router) {
 
 	// router.post('/users', function (req, res) {
 	// 	var user = new User();
+	// 	user.username = req.body.username;
+	// 	user.password = req.body.password;
+	// 	user.email = req.body.email;
+	// 	if (req.body.username == null || req.body.username == "" || req.body.password == null || 
+	// 	req.body.password == "" || req.body.email == null || req.body.email == "") {
+	// 		res.json({success:false, message:'ensure details'})
+
+	// 	} else {
+			
+	// 		user.save(function(err){
+	// 			if (err){
+	// 				console.log(err);
+	// 				res.json({success:false, message:'Username al'})
+	// 			}else{
+	// 				res.json({success:true, message:"created"})
+	// 			}
+	// 		});
+			
+	// 	}
+	// });
+	// router.post('/profile', function (req, res) {
+	// 	var prof = new Prof();
 	// 	user.username = req.body.username;
 	// 	user.password = req.body.password;
 	// 	user.email = req.body.email;

@@ -53,14 +53,7 @@ module.exports = function (app, passport) {
                     user.username = profile._json.name;               
                     //     newUser.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName; // look at the passport user profile to see how names are returned
                     user.email = profile.emails[0].value;
-                    user.save(function (err, tex) {
-                        if (err) {
-                            console.log(" hello error "+err);
-                        } else {
-                            console.log(tex);
-                        }
-                    });
-                    //     done(err);
+                    user.save();
                 }
             });
             done(null, profile);
@@ -70,28 +63,22 @@ module.exports = function (app, passport) {
     passport.use(new GoogleSrategy({
             clientID: '810441631089-rhd3dv8tbnv5oodsgu90muprnmojp2fq.apps.googleusercontent.com',
             clientSecret: 'odlhXYl4onhGLB9whN6OqPJU',
-            callbackURL: "http://localhost:8000/auth/google/callback"
+            callbackURL: "http://localhost:5000/auth/google/callback"
         },
         function (accessToken, refreshToken, profile, done) {
-            console.log(profile);
+            // console.log(profile);
               User.findOne({email: profile._json.email}).select('username active password email').exec(function (err, user) {
                 if (err) done(err);
                 if (user && user !== null) {
                     done(null, user);
                 } else {
-                    console.log(profile.emails[0].value);
+                    // console.log(profile._json.displayName);
+                    // console.log(profile._json.emails[0].value);
                     var user = new User();
 
-                    user.username = profile._json.name;               
-                    //     newUser.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName; // look at the passport user profile to see how names are returned
-                    user.email = profile.emails[0].value;
-                    user.save(function (err, tex) {
-                        if (err) {
-                            console.log(" hello error "+err);
-                        } else {
-                            console.log(tex);
-                        }
-                    });
+                    user.username = profile._json.displayName;               
+                    user.email = profile._json.emails[0].value;
+                    user.save();
                 }
             });
 
@@ -106,16 +93,17 @@ module.exports = function (app, passport) {
     }), function (req, res) {
         res.redirect('/google' + token);
     });
-    app.get('/auth/google', passport.authenticate('google', {
-        scope: ['https://www.googleapis.com/auth/plus.login', 'profile', 'email']
-    }));
-
 
     app.get('/auth/facebook/callback', passport.authenticate('facebook', {
         failureRedirect: '/facebookerror'
     }), function (req, res) {
         res.redirect('/facebook/' + token);
     });
+
+    app.get('/auth/google', passport.authenticate('google', {
+        scope: ['https://www.googleapis.com/auth/plus.login', 'profile', 'email']
+    }));
+   
 
     app.get('/auth/facebook', function (req, res, next) {
         console.log("request received");

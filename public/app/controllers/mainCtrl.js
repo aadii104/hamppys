@@ -4,7 +4,7 @@ angular.module('mainCntroller',['authServices'])
     var app = this;
 
 
-    $rootScope.$on('$routeChangeStart', function(){
+    $rootScope.$on('$routeChangeStart', function(err){
          if(Auth.isLoggedIn()){
             
             console.log(" sucess user is logged in");
@@ -17,7 +17,7 @@ angular.module('mainCntroller',['authServices'])
             });
 
         }else{
-
+            if(err)console.log("swag" + err);
             console.log("user not login ");
             
             app.isLoggedIn = false;

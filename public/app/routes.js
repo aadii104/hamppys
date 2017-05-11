@@ -2,7 +2,8 @@ var app =  angular.module('appRoutes',['ngRoute'])
 .config(function($routeProvider,$locationProvider) {
 	$routeProvider
 	.when('/',{
-		templateUrl:'app/views/pages/home.html'
+		templateUrl:'app/views/pages/home.html',
+		authenticated: false
 	})
 
 	.when('/product',{
@@ -14,8 +15,8 @@ var app =  angular.module('appRoutes',['ngRoute'])
 
 	.when('/profile',{
 		templateUrl:'app/views/pages/profile.html',
-		controller: 'profileCtrl',
-		controllerAs: 'profile',
+		// controller: 'profileCtrl',
+		// controllerAs: 'profile',
 		authenticated: true
 	})
 
